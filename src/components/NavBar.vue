@@ -27,16 +27,26 @@ export default {
 <style scoped>
   /* Navbar container */
   .navbar {
+    border-style: outset;
+    border-color: white;
+    color: #ffb121;
+    font-weight: bold;
     overflow: hidden;
-    background-color: #333;
+    background-color: #610000;
     font-family: Arial,serif;
+  }
+
+  button {
+    color: inherit;
+    font-weight: inherit;
   }
 
   /* Links inside the navbar */
   .navbar a {
+    color: inherit;
+    font-weight: inherit;
     float: left;
     font-size: 16px;
-    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -53,7 +63,6 @@ export default {
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
@@ -62,14 +71,16 @@ export default {
 
   /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #9d0000;
   }
 
   /* Dropdown content (hidden by default) */
   .dropdown-content {
+    color: #610000;
+    font-weight: normal;
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #ffb121;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
@@ -77,8 +88,8 @@ export default {
 
   /* Links inside the dropdown */
   .dropdown-content a {
+    color: inherit;
     float: none;
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -87,7 +98,7 @@ export default {
 
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #ffc458;
   }
 
   /* Show the dropdown menu on hover */
