@@ -14,19 +14,28 @@
       </div>
     </div>
     <div class="item right" id="subtitle">
-      <h2>by Kamiel de Visser</h2>
+      <p>by Kamiel de Visser<br><br>It is currently {{this.date()[0]}}<br>at{{this.date()[1]}}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Header.vue'
+  name: 'Header.vue',
+  methods:
+    {
+      date () {
+        const s = new Date().toLocaleString()
+        const date = s.slice(0, s.length - 10)
+        const time = s.slice(s.length - 9, s.length - 3)
+        return [date, time]
+      }
+    }
 }
+
 </script>
 
 <style scoped>
-
 h1, h2 {
   margin: 0;
   color:white;
@@ -40,9 +49,10 @@ h1, h2 {
 }
 
 .right {
+  font-weight: bold;
+  color: white;
   display: flex;
   justify-content: right;
-  margin-top: 10px;
   margin-right: 25px;
 }
 
