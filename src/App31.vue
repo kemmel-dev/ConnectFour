@@ -18,11 +18,5 @@ export default {
 </script>
 
 <style>
-   body {
-     position: absolute;
-     top: 0; /* Header Height */
-     bottom: 0; /* Footer Height */
-     margin: 0;
-     width: 100%;
-   }
+  @import "src/assets/style.css";
 </style>
