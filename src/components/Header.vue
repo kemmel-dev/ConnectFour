@@ -1,19 +1,21 @@
 <template>
-  <div id="header">
-      <div id="logo">
-        <h1>logo</h1>
+  <div class="parent">
+    <div class="item container" id="logo">
+      <div class="center middle">
+        <img src="@/assets/logo.png" alt="Connect Four Logo">
       </div>
-      <div id="title">
-        <div id="title1">
-          <h1>Title1</h1>
-        </div>
-        <div id="title2">
-          <h2>Title2</h2>
-        </div>
+    </div>
+    <div class="item" id="titles">
+      <div class="sub-item">
+          <h1>Connect Four</h1>
       </div>
-      <div id="subtitle">
-        <h3> Subtitle </h3>
+      <div class="sub-item">
+          <h2>Online demo</h2>
       </div>
+    </div>
+    <div class="item right" id="subtitle">
+      <h2>by Kamiel de Visser</h2>
+    </div>
   </div>
 </template>
 
@@ -24,36 +26,65 @@ export default {
 </script>
 
 <style scoped>
-  h1, h2, h3 {
-    color: white;
-  }
 
-  #header {
-    width: 100%;
-    height: 125px;
-  }
-  #header div {
-    display: inline-block;
-  }
-  #header div div {
-    display:inline;
-  }
-  #logo
-  {
-    background: black;
-    width: 10%;
-    height: 100%;
-  }
-  #title
-  {
-    background: red;
-    width: 45%;
-    height: 100%;
-  }
-  #subtitle
-  {
-    background: blue;
-    width: 45%;
-    height: 100%;
-  }
+h1, h2 {
+  margin: 0;
+  color:white;
+  font-family: fantasy;
+  font-weight: bolder;
+  -webkit-text-stroke: 1px black;
+}
+
+.sub-item {
+  margin-top: 10px;
+}
+
+.right {
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
+  margin-right: 25px;
+}
+
+.parent {
+  display: flex;
+  height: 110px;
+  background-image: url("@/assets/header.png");
+  background-size: 110px;
+}
+
+img {
+  height: 75px;
+}
+
+#logo
+{
+  width: 20%;
+}
+
+#titles {
+  width:40%
+}
+
+#subtitle {
+  width:40%
+}
+
+.container {
+  position: relative;
+  height: 110px;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.middle {
+  top: 50%;
+  left: 50%;
+}
+
 </style>
