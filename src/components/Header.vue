@@ -10,7 +10,7 @@
           <h1>Connect Four</h1>
       </div>
       <div class="sub-item">
-          <h2>Online demo</h2>
+          <h2><i>A time tested classic</i></h2>
       </div>
     </div>
     <div class="item right" id="subtitle">
@@ -51,6 +51,7 @@ h1, h2 {
   height: 110px;
   background-image: url("@/assets/header.png");
   background-size: 110px;
+  background-color: #610000;
 }
 
 img {
