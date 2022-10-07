@@ -14,8 +14,12 @@ class Game {
   }
 
   static createSampleGame (pid = 0) {
-    return new Game(pid, 'Test Game Title', Math.random(Status), Math.random(30, 120), Math.random(2) === 0,
+    return new Game(pid, 'Test Game Title', Object.keys(Status)[this.randInt(0, 4)], this.randInt(30, 120), this.randInt(0, 2) === 0,
       Game.randomDate(new Date(2022, 6, 0), new Date()), 'Dev')
+  }
+
+  static randInt (min, max) {
+    return Math.floor(min + Math.random() * (max - min))
   }
 }
 
