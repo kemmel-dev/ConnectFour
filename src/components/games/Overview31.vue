@@ -60,58 +60,56 @@ export default {
 
 <style scoped>
 
-  .tableContainer {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
+.tableContainer {
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
-  button {
-    float: right;
-    width: 150px;
-    height: 50px;
-    color: white;
-    background-color: #610000;
-  }
+button {
+  float: right;
+  width: 150px;
+  height: 50px;
+  color: white;
+  background-color: #610000;
+}
 
-  /* Style under this comment is generated mostly by https://divtable.com/table-styler/ */
-  table.redTable {
-    border: 2px solid #A40808;
-    background-color: #EEE7DB;
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
-  }
-  table.redTable td, table.redTable th {
-    border: 1px solid #AAAAAA;
-    padding: 3px 2px;
-  }
-  table.redTable tbody td {
-    font-size: 13px;
-  }
-  table.redTable tr:nth-child(even) {
-    background: #F5C8BF;
-  }
-  table.redTable thead {
-    background: #A40808;
-  }
-  table.redTable thead th {
-    font-size: 19px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-align: center;
-    border-left: 2px solid #A40808;
-  }
-  table.redTable thead th:first-child {
-    border-left: none;
-  }
+/* Style under this comment is generated mostly by https://divtable.com/table-styler/ */
+table.redTable {
+  border: 2px solid #A40808;
+  background-color: #EEE7DB;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.redTable td, table.redTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.redTable tbody td {
+  font-size: 13px;
+}
 
-  table.redTable tfoot {
-    font-size: 13px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background: #A40808;
-  }
-  table.redTable tfoot td {
-    font-size: 13px;
-  }
+table.redTable thead {
+  background: #A40808;
+}
+table.redTable thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #A40808;
+}
+table.redTable thead th:first-child {
+  border-left: none;
+}
+
+table.redTable tfoot {
+  font-size: 13px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #A40808;
+}
+table.redTable tfoot td {
+  font-size: 13px;
+}
 </style>
