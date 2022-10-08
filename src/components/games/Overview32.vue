@@ -1,29 +1,33 @@
 <template>
-  <h1>All Games</h1>
-  <div class="tableContainer">
-    <table class="redTable">
-      <thead>
-      <tr>
-        <th>ID</th>
-        <th>Title</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr v-for:="game in gameList" :class="{selected: selectedGame === game}" v-on:click="selectGame(game)">
-        <td>{{ game.id }}</td>
-        <td>{{ game.title }}</td>
-      </tr>
-      </tbody>
-    </table>
-    <button v-on:click="addRandGame">
-      New game
-    </button>
+  <div class ="contentWrapper">
+    <h1>All Games</h1>
+    <div class="tableContainer">
+      <table class="redTable">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for:="game in gameList" :class="{selected: selectedGame === game}" v-on:click="selectGame(game)">
+          <td>{{ game.id }}</td>
+          <td>{{ game.title }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <button v-on:click="addRandGame">
+        New game
+      </button>
+    </div>
+    <detail32 v-model:game="selectedGame" @deleteGame="deleteGame(selectedGame)"></detail32>
   </div>
 </template>
 
 <script>
 
-import { Game } from '../models/game'
+import Detail32 from '@/components/games/Detail32'
+import { Game } from '@/components/models/game'
 
 export default {
   name: 'Overview32',
@@ -39,6 +43,9 @@ export default {
   },
   mounted () {
     this.gameList = this.getRandGames()
+  },
+  components: {
+    Detail32
   },
   methods:
     {
@@ -57,6 +64,10 @@ export default {
       },
       selectGame (game) {
         this.selectedGame = game === this.selectedGame ? null : game
+      },
+      deleteGame (game) {
+        this.gameList.splice(this.gameList.indexOf(game), 1)
+        this.selectedGame = null
       }
     }
 }
@@ -64,9 +75,15 @@ export default {
 
 <style scoped>
 
-.tableContainer {
+h1 {
   margin-left: 50px;
-  margin-right: 50px;
+}
+
+.tableContainer {
+  display: inline-block;
+  width: 50%;
+  margin-left: 50px;
+  margin-right: 5%;
 }
 
 button {
