@@ -31,5 +31,5 @@ const Status = {
 }
 
 export {
-  Game
+  Game, Status
 }
