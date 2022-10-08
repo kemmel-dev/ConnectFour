@@ -2,29 +2,38 @@
 
 <template>
   <div class="navbar">
-    <a href="#home">Home</a>
-    <div class="dropdown">
+    <router-link to="/home">Home</router-link>
+    <div class="dropdown" :class="{'router-link-active': currentRoute.toString().startsWith('/games/')}">
       <button class="dropbtn">Games
         <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-content">
-        <a href="#">All Games overview</a>
+      <div class="dropdown-content" >
+        <router-link to="/games/overview31">All Games overview</router-link>
         <a href="#">Game details (comp)</a>
-        <a href="#">Game details (router)</a>
+        <router-link to="/games/overview32">Game details (router)</router-link>
       </div>
     </div>
-    <a href="#register" id="register" >Sign Up</a>
-    <a href="#login" id="login">Log In</a>
+    <router-link to="/register" id="register" >Sign Up</router-link>
+    <router-link to="/login" id="login">Log In</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  computed: {
+    currentRoute () {
+      return this.$route.fullPath
+    }
+  }
 }
 </script>
 
 <style scoped>
+  .router-link-active {
+    background-color: #731e1e !important;
+  }
+
   /* Navbar container */
   .navbar {
     border-style: outset;
@@ -76,11 +85,11 @@ export default {
 
   /* Dropdown content (hidden by default) */
   .dropdown-content {
-    color: #610000;
+    color: white;
     font-weight: normal;
     display: none;
     position: absolute;
-    background-color: #ffb121;
+    background-color: #481c1c;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
@@ -98,7 +107,7 @@ export default {
 
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #ffc458;
+    background-color: #964242 !important;
   }
 
   /* Show the dropdown menu on hover */
