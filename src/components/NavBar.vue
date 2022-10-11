@@ -9,8 +9,8 @@
       </button>
       <div class="dropdown-content" >
         <router-link to="/games/overview31">All Games overview</router-link>
-        <a href="#">Game details (comp)</a>
-        <router-link to="/games/overview32">Game details (router)</router-link>
+        <router-link to="/games/overview32">Game details (comp)</router-link>
+        <router-link to="/games/overview33">Game edit (router)</router-link>
       </div>
     </div>
     <router-link to="/register" id="register" >Sign Up</router-link>
