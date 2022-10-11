@@ -1,5 +1,5 @@
 <template>
-  <div id="app-games-detail">
+  <router-view id="app-games-detail">
     <div class="tableContainer" v-if="game != null">
       <table class="redTable">
         <thead>
@@ -48,7 +48,7 @@
     <div v-else>
       <p>Please select a game!</p>
     </div>
-  </div>
+  </router-view>
 </template>
 
 <script>
