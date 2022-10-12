@@ -1,6 +1,6 @@
 <template>
   <router-view id="app-games-detail">
-    <div class="tableContainer" v-if="game != null">
+    <div v-if="game != null">
       <table class="redTable">
         <thead>
         <tr>
@@ -83,9 +83,9 @@ export default {
 
 <style scoped>
   #app-games-detail {
+    display: block;
     vertical-align: top;
     width: 35%;
-    display: inline-block;
     color: black;
   }
 </style>

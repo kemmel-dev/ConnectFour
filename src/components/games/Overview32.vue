@@ -1,6 +1,6 @@
 <template>
+  <h1>All Games</h1>
   <div class ="contentWrapper">
-    <h1>All Games</h1>
     <div class="tableContainer">
       <table class="redTable">
         <thead>
@@ -75,13 +75,17 @@ export default {
 
 <style scoped>
 
+.contentWrapper {
+  width: 100%;
+  display: flex;
+}
+
 h1 {
   margin-left: 50px;
 }
 
 .tableContainer {
-  display: inline-block;
-  width: 50%;
+  width: 40%;
   margin-left: 50px;
   margin-right: 5%;
 }
