@@ -10,7 +10,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for:="game in gameList" :class="{selected: selectedGame === game}" v-on:click="selectGame(game)">
+        <tr v-for:="game in gameList" :class="{selected: selectedGame != null && selectedGame.id === game.id}" v-on:click="selectGame(game)">
           <td>{{ game.id }}</td>
           <td>{{ game.title }}</td>
         </tr>
@@ -20,7 +20,7 @@
         New game
       </button>
     </div>
-    <detail34 v-model:game="selectedGame" @deleteGame="deleteGame(selectedGame)"></detail34>
+    <detail34 v-model:game="selectedGame" @deleteGame="deleteGame(selectedGame)" @saveGame="saveGame(selectedGame)"></detail34>
   </div>
 </template>
 
