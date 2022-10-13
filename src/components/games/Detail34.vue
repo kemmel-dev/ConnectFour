@@ -44,6 +44,9 @@
       <button @click="$emit('deleteGame')">
         Delete
       </button>
+      <button @click="$emit('saveGame')">
+        Save
+      </button>
     </div>
     <div v-else>
       <p>Please select a game!</p>
@@ -64,7 +67,7 @@ export default {
   props: {
     game: Game
   },
-  emits: ['deleteGame'],
+  emits: ['deleteGame', 'saveGame'],
   computed: {
     dateUpdater: {
       get () {
