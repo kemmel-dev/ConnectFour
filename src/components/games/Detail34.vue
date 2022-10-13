@@ -64,6 +64,9 @@ export default {
       statusOptions: Status
     }
   },
+  created () {
+    this.localCopyOfGame = Game.copyOf(this.game)
+  },
   props: {
     game: Game
   },
