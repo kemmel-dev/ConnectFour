@@ -21,6 +21,11 @@ class Game {
   static randInt (min, max) {
     return Math.floor(min + Math.random() * (max - min))
   }
+
+  static copyOf (source) {
+    const copy = new Game()
+    return Object.assign(copy, source)
+  }
 }
 
 const Status = {
